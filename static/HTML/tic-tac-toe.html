@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="/static/CSS/chat-box-btn.css">
+  <link rel="stylesheet" href="/static/CSS/tic-tac-toe-style.css">
+  <!-- <link rel="shortcut icon" href="favicon.ico"> -->
+</head>
+
+<body>
+  <div class="board">
+    <button id="a0"></button>
+    <button id="a1"></button>
+    <button id="a2"></button>
+    <button id="b0"></button>
+    <button id="b1"></button>
+    <button id="b2"></button>
+    <button id="c0"></button>
+    <button id="c1"></button>
+    <button id="c2"></button>
+    <div id="messages">Waiting for opponent to join...</div>
+
+  </div>
+
+  <div>
+
+    <button onclick="save_score(tic_tac_toe_highscore)" type="button">
+      Save score
+    </button>
+  </div>
+  <div>
+    <button onclick="display_score()" type="button">
+      Check score
+    </button>
+
+  </div>
+  <div>
+    <button onClick="window.location.reload();">Refresh</button>
+  </div>
+
+
+
+  <div id="stick" class="hide">
+    <div id="iframepos" class="iframe-span" style="border-radius: 20px;">
+      <iframe style="border-radius: 20px;" src="http://localhost:3001/" height="300px" width="350px"
+        frameborder="0"></iframe>
+
+    </div>
+
+  </div>
+  <span id="span">
+    <button onclick="toggle()" type="button" value="OFF" firsttime="1" class="chatbutton" id="chat-btn" style="background-color: greenyellow;
+    border: 2px solid black;
+    color: black;
+    padding: 3px 12px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 25px;">
+      CHAT-BOX
+
+    </button>
+  </span>
+  <script>
+    function toggle() {
+      if (document.getElementById("chat-btn").value == "OFF") {
+        document.getElementById("chat-btn").value = "ON";
+      }
+      else if (document.getElementById("chat-btn").value == "ON") {
+        document.getElementById("chat-btn").value = "OFF";
+      }
+      if (document.getElementById("chat-btn").value == "ON") {
+        document.getElementById("stick").className = "stick";
+        console.log("this button is toggle on")
+      }
+      else if (document.getElementById("chat-btn").value == "OFF") {
+        document.getElementById("stick").className = "hide";
+        console.log("this button is toggle off")
+      }
+    }
+  </script>
+
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+  <script src="/static/JAVASCRIPT/tic-tac-toe-script.js" defer></script>
+</body>
+
+</html>

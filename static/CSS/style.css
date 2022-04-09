@@ -1,0 +1,256 @@
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;
+
+  /* background: transparent;   */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* headings */
+/* headings */
+/* headings */
+/* headings */
+/* headings */
+/* headings */
+/* headings */
+/* headings */
+
+
+#divdiv {
+  display: flex;
+  justify-content: center;
+}
+
+.out-most {
+  display: flex;
+  justify-content: center;
+  background-color: #000000;
+}
+
+
+/* 
+      CSS FOR HOVER EFFECT UI
+        CSS FOR HOVER EFFECT UI
+        CSS FOR HOVER EFFECT UI
+        CSS FOR HOVER EFFECT UI
+          CSS FOR HOVER EFFECT UI
+      CSS FOR HOVER EFFECT UI
+        CSS FOR HOVER EFFECT UI
+        CSS FOR HOVER EFFECT UI
+        CSS FOR HOVER EFFECT UI
+          CSS FOR HOVER EFFECT UI
+      CSS FOR HOVER EFFECT UI
+        CSS FOR HOVER EFFECT UI
+      CSS FOR HOVER EFFECT UI
+*/
+
+
+
+
+
+
+div section {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#ul {
+  color: black;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  display: flex;
+  border-radius: 17px;
+}
+
+.ul-li {
+  list-style: none;
+  width: 20%;
+}
+
+.ul-li-a {
+  display: block;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.5s;
+  font-family: sans-serif;
+  border-radius: 17px;
+}
+
+.ul-li-a:hover {
+ 
+  background: rgba(36, 36, 179, 0.644);
+  color: white;
+}
+
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.ul-li:nth-child(1) .a + .img {
+  opacity: 0;
+}
+
+.ul-li-a:hover + .img {
+  opacity: 1;
+  animation: animate 20s linear forwards;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+
+/* button */
+/* button */
+/* button */
+/* button */
+
+/* CSS */
+.button1 {
+  appearance: none;
+  background-color: #ffffff;
+  border-radius: 5px;
+
+  border-style: none;
+  box-shadow: #adcfff 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.24px;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.3rem;
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  border-radius: 15px;
+
+}
+
+.button1:hover {
+  background-color: #ffffff;
+  box-shadow: #000000 0 -6px 8px inset;
+  transform: scale(1.125);
+  width: 89%;
+}
+
+.button1:active {
+  transform: scale(1.025);
+}
+
+@media (min-width: 768px) {
+  .button1 {
+    font-size: 1.5rem;
+    padding: 0.75rem 2rem;
+  }
+}
+
+/* CSS */
+.button2 {
+  appearance: none;
+  background-color: #ffffff;
+  border-radius: 5px;
+  width: auto;
+  border-style: none;
+  box-shadow: #adcfff 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.24px;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.3rem;
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  border-radius: 15px;
+}
+
+.button2:hover {
+  background-color: #ffffff;
+  box-shadow: #000000 0 -6px 8px inset;
+  transform: scale(1.125);
+  width: 89%;
+}
+
+.button2:active {
+  transform: scale(1.025);
+}
+
+.head {
+  color: #ff003c;
+  font-size:x-large;
+}
+@media (min-width: 768px) {
+  .button2 {
+    font-size: 1.5rem;
+    padding: 0.75rem 2rem;
+  }
+}
+
+
+
+

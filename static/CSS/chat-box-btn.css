@@ -1,0 +1,36 @@
+.back {
+  height: 3000px;
+  background-color: aqua;
+}
+.stick {
+  /* height: 400px;
+  width: 300px; */
+  /* background-color: white; */
+  position: sticky;
+  bottom: 35px;
+  
+}
+.iframe-span {
+  background-color: white;
+  height: 300px;
+  width: 350px;
+  
+
+}
+#chat-btn {
+
+  background-color: white;
+  position: sticky;
+  bottom: 1px;
+}
+.chatbutton {
+  position:fixed;
+
+  
+}
+.hide {
+  display: none;
+}
+#iframepos {
+  bottom: 100px;
+}

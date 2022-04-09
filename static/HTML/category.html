@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Category Filter in JS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/CSS/nav.css">
+    <link rel="stylesheet" href="/static/CSS/category.css">
+</head>
+
+<body>
+
+
+    <div>
+        <input type="checkbox" id="check">
+        <nav>
+            <div class="head">MULTI GAMING</div>
+
+
+
+            <div class="wrapper">
+                <div class="search_box search-input" id="bar-border">
+                    <a href="" hidden></a>
+                    <input id="in" type="text" placeholder="Search Games here ...">
+
+                    <div class="autocom-box">
+                    </div>
+
+                    <div id="ico" class="icon"><i class="fas fa-search"></i></div>
+                </div>
+            </div>
+
+
+
+            <ol>
+                <li>
+                    <form action="" method="post">
+                        <a href="/home">HOME</a>
+                    </form>
+                    
+                    </li>
+                <li><a href="#">CATEGORIES</a></li>
+                <li><a href="/chat-app">CHAT-APP</a></li>
+                <li>
+                    <form action="" method="post">
+
+                    </form><a href="/about">ABOUT</a>
+                </form>
+            </li>
+                <li><a href="http://localhost:3003/profile">PROFILE</a></li>
+
+            </ol>
+            <label for="check" class="bar">
+                <span class="fa fa-bars" id="bars"></span>
+                <span class="fa fa-times" id="times"></span>
+            </label>
+        </nav>
+
+
+        <script src="/static/JAVASCRIPT/suggestions.js"></script>
+        <script src="/static/JAVASCRIPT/script.js"></script>
+    </div>
+
+
+
+
+
+    <div class="main-container">
+
+
+        <div class="filter-container">
+            <div class="category-head">
+                <ul>
+                    <div class="category-title active" id="all">
+                        <li>All</li>
+                        <span><i class="fas fa-border-all"></i></span>
+                    </div>
+                    <div class="category-title" id="action">
+                        <li>Action</li>
+                        <span><i class="fas fa-theater-masks"></i></span>
+                    </div>
+                    <div class="category-title" id="multiplayer">
+                        <li>Multiplayer</li>
+                        <span><i class="fa fa-users" aria-hidden="true"></i></span>
+                    </div>
+
+                    <div class="category-title" id="retro">
+                        <li>Retro</li>
+                        <span><i class="fas fa-star"></i></span>
+                    </div>
+                    <div class="category-title" id="shooting">
+                        <li>Shooting</li>
+                        <span><i class="fas fa-crosshairs"></i></span>
+                    </div>
+                    <div class="category-title" id="racing">
+                        <li>Racing</li>
+                        <span><i class="fas fa-chart-area"></i></span>
+                    </div>
+                    <div class="category-title" id="music">
+                        <li>Music</li>
+                        <span><i class="fas fa-music"></i></span>
+                    </div>
+
+                    <div class="category-title" id="sports">
+                        <li>Sports</li>
+                        <span><i class="fas fa-futbol"></i></span>
+                    </div>
+                    <div class="category-title" id="other">
+                        <li>Other</li>
+                        <span><i class="fas fa-gamepad"></i></span>
+                    </div>
+
+
+                </ul>
+            </div>
+
+            <div class="posts-collect">
+                <div class="posts-main-container">
+
+
+
+                    <div class="all action">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/Mini-militia.jpg" alt="post">
+                            <span class="category-name">Action Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='/WEB-GAMES/MINI-MILITIA/index.html'" class="read-btn">MINI-MILITIA</button>
+                    </div>
+
+                    <div class="all action">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/MORTAL-KOMBAT.jpg" alt="post">
+                            <span class="category-name">Action Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='/mortal-kombat'" class="read-btn">MORTAL-KOMBAT</button>
+                    </div>
+
+                    <div class="all action">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/SHADOW-FIGHT.jpg" alt="post">
+                            <span class="category-name">Action Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='/WEB-GAMES/SHADOW-FIGHT/index.html'" class="read-btn">SHADOW-FIGHT</button>
+                    </div>
+
+                    <div class="all action">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/Hungry shark.jpg" alt="post">
+                            <span class="category-name">Action Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/22895'" class="read-btn">Hungry Shark</button>
+                    </div>
+
+                    <div class="all action">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/first person royal.jpg" alt="post">
+                            <span class="category-name">Action Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/23683'" class="read-btn">First Person Royale</button>
+                    </div>
+
+
+                    <div class="all action">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/impostor.jpg" alt="post">
+                            <span class="category-name">Action Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/24761'" class="read-btn">Imposter</button>
+                    </div>
+
+                    <div class="all action">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/elite squad.jpg" alt="post">
+                            <span class="category-name">Action Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/24789'" class="read-btn">Elite Squad</button>
+                    </div>
+
+                    <div class="all action">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/kirka.jpg" alt="post">
+                            <span class="category-name">Action Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/25023'" class="read-btn">Kirka</button>
+                    </div>
+
+                    <div class="all action">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/drafting adven.jpg" alt="post">
+                            <span class="category-name">Action Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/25049'" class="read-btn">Rafting Adventure</button>
+                    </div>
+
+                    <div class="all action">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/voxiom.jpg" alt="post">
+                            <span class="category-name">Action Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/24810'" class="read-btn">Voxiom</button>
+                    </div>
+
+                    <div class="all action">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/field of fury.jpg" alt="post">
+                            <span class="category-name">Action Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/25075'" class="read-btn">Field Of Fury</button>
+                    </div>
+
+                    <div class="all action">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/deathswitch.jpg" alt="post">
+                            <span class="category-name">Action Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/24807'" class="read-btn">Deadswitch</button>
+                    </div>
+
+
+
+
+                    <div class="all racing">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/HEXGL.jpg" alt="post">
+                            <span class="category-name">Racing Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='/WEB-GAMES/HexGL/index.html'" class="read-btn">HEXGL</button>
+                    </div>
+
+                    <div class="all racing">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/Racing_game.jpg" alt="post">
+                            <span class="category-name">Racing Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='/WEB-GAMES/CAR-RACE/index.html'" class="read-btn">CAR GAME</button>
+                    </div>
+
+                    <div class="all racing">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/car racing_11zon.jpg" alt="post">
+                            <span class="category-name">Racing Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/25031'" class="read-btn">Car Racing</button>
+                    </div>
+
+                    <div class="all racing">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/stunt dirt bike.jpg" alt="post">
+                            <span class="category-name">Racing Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/19997'" class="read-btn">Stunt Dirt Bike</button>
+                    </div>
+
+                    <div class="all racing">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/enthustiac.jpg" alt="post">
+                            <span class="category-name">Racing Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/25013'" class="read-btn">Enthusiast Drift Rivals</button>
+                    </div>
+
+                    <div class="all racing">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/two stunt rivals.jpg" alt="post">
+                            <span class="category-name">Racing Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/24762'" class="read-btn">Two Stunt Rivals</button>
+                    </div>
+
+                    <div class="all racing">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/city dunk_11zon.jpg" alt="post">
+                            <span class="category-name">Racing Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/23913'" class="read-btn">City Dunk</button>
+                    </div>
+
+                    <div class="all  multiplayer ">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/MORTAL-KOMBAT.jpg" alt="post">
+                            <span class="category-name">Multiplayer</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='/mortal-kombat'" class="read-btn">MORTAL-KOMBAT</button>
+                    </div>
+
+                    <div class="all multiplayer">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/BATTLESHIP.jpg" alt="post">
+                            <span class="category-name">Multiplayer</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='/battleship'"class="read-btn">BATTLESHIP</button>
+                    </div>
+
+                    <div class="all multiplayer">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/Snake-game.png" alt="post">
+                            <span class="category-name">Multiplayer</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='/WEB-GAMES/multiplayerSnake-master/multiplayerSnake-master/frontend/index.html'"class="read-btn">SNAKE-GAME</button>
+                    </div>
+                    <div class="all multiplayer">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/tic_tac_toe_game.jpg" alt="post">
+                            <span class="category-name">Multiplayer</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='/tic-tac-toe'"class="read-btn">TIC-TAC-TOE</button>
+                    </div>
+
+
+                    <div class="all shooting">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/Ludo_game.jpg" alt="post">
+                            <span class="category-name">Shooting Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='/WEB-GAMES/LUDO/index.html'"class="read-btn">LUDO</button>
+                    </div>
+
+
+                    <div class="all shooting">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/2048.jpg" alt="post">
+                            <span class="category-name">Shooting Game</span>
+                        </div>
+                        <button type="button"onclick="window.location.href='/WEB-GAMES/2048/index.html'" class="read-btn">2048</button>
+                    </div>
+
+                 
+
+                    <div class="all shooting">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/bubble shooter.jpg" alt="post">
+                            <span class="category-name">Shooting Game</span>
+                        </div>
+                        <button type="button"onclick="window.location.href='//www.addictinggames.com/embed/html5-games/25045'" class="read-btn">Bubble Shoot</button>
+                    </div>
+
+                    <div class="all shooting">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/ballon shoot.jpg" alt="post">
+                            <span class="category-name">Shooting Game</span>
+                        </div>
+                        <button type="button"onclick="window.location.href='//www.addictinggames.com/embed/html5-games/17154'" class="read-btn">Ballons Shoot</button>
+                    </div>
+
+
+                    <div class="all shooting">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/the archers.jpg" alt="post">
+                            <span class="category-name">Shooting Game</span>
+                        </div>
+                        <button type="button"onclick="window.location.href='//www.addictinggames.com/embed/html5-games/23917'" class="read-btn">The Archers</button>
+                    </div>
+
+                    <div class="all shooting">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/100 arrows_2_11zon.jpg" alt="post">
+                            <span class="category-name">Shooting Game</span>
+                        </div>
+                        <button type="button"onclick="window.location.href='//www.addictinggames.com/embed/html5-games/20748'" class="read-btn">100 Arrows</button>
+                    </div>
+
+                    <div class="all sports">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/squid.jpg" alt="post">
+                            <span class="category-name">Sports Game</span>
+                        </div>
+                        <button type="button"onclick="window.location.href='/WEB-GAMES/SQUID-GAME/index.html'" class="read-btn">SQUID-GAME</button>
+                    </div>
+
+                    <div class="all sports">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/cricket hero.jpg" alt="post">
+                            <span class="category-name">Sports Game</span>
+                        </div>
+                        <button type="button"onclick="window.location.href='//www.addictinggames.com/embed/html5-games/25058'" class="read-btn">Cricket Hero</button>
+                    </div>
+
+                    <div class="all sports">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/basketball hit.jpg" alt="post">
+                            <span class="category-name">Sports Game</span>
+                        </div>
+                        <button type="button"onclick="window.location.href='//www.addictinggames.com/embed/html5-games/24787'" class="read-btn">Basketball Hit</button>
+                    </div>
+
+                    <div class="all sports">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/Boxing Star.jpg" alt="post">
+                            <span class="category-name">Sports Game</span>
+                        </div>
+                        <button type="button"onclick="window.location.href='//www.addictinggames.com/embed/html5-games/25051'" class="read-btn">Boxing Stars</button>
+                    </div>
+
+                    <div class="all sports">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/bolwerama.jpg" alt="post">
+                            <span class="category-name">Sports Game</span>
+                        </div>
+                        <button type="button"onclick="window.location.href='//www.addictinggames.com/embed/html5-games/24833'" class="read-btn">Bowlerama</button>
+                    </div>
+
+
+                    <div class="all sports">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/goalkeeper.jpg" alt="post">
+                            <span class="category-name">Sports Game</span>
+                        </div>
+                        <button type="button"onclick="window.location.href='//www.addictinggames.com/embed/html5-games/24780'" class="read-btn">Goalkeeper</button>
+                    </div>
+
+                    <div class="all sports">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/golf blast.jpg" alt="post">
+                            <span class="category-name">Sports Game</span>
+                        </div>
+                        <button type="button"onclick="window.location.href='//www.addictinggames.com/embed/html5-games/24570'" class="read-btn">Golf Blast</button>
+                    </div>
+
+                    <div class="all sports">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/dogeball.jpg" alt="post">
+                            <span class="category-name">Sports Game</span>
+                        </div>
+                        <button type="button"onclick="window.location.href='//www.addictinggames.com/embed/html5-games/18137'" class="read-btn">Dodgeball</button>
+                    </div>
+
+                    <div class="all sports">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/3dbowling.jpg" alt="post">
+                            <span class="category-name">Sports Game</span>
+                        </div>
+                        <button type="button"onclick="window.location.href='//www.addictinggames.com/embed/html5-games/23910'" class="read-btn">3D Bowling</button>
+                    </div>
+
+                    <div class="all sports">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/8ballpool.jpg" alt="post">
+                            <span class="category-name">Sports Game</span>
+                        </div>
+                        <button type="button"onclick="window.location.href='//www.addictinggames.com/embed/html5-games/24759'" class="read-btn">Pool: 8-Ball Mania</button>
+                    </div>
+
+                    <div class="all sports">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/gravity-soccer.jpg" alt="post">
+                            <span class="category-name">Sports Game</span>
+                        </div>
+                        <button type="button"onclick="window.location.href='//www.addictinggames.com/embed/html5-games/23089'" class="read-btn">Gravity Soccer</button>
+                    </div>
+
+
+                    <div class="all music">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/PIANO.jpg" alt="post">
+                            <span class="category-name">Music Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='/WEB-GAMES/PIANO/index.html'"class="read-btn">PIANO</button>
+                    </div>
+
+                    <div class="all other">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/little big snake.jpg" alt="post">
+                            <span class="category-name">Other Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/23032'"class="read-btn">Little Big Snake</button>
+                    </div>
+
+                    <div class="all other">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/helicopter.jpg" alt="post">
+                            <span class="category-name">Other Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/16834'"class="read-btn">Helicopter Game</button>
+                    </div>
+
+                    <div class="all music">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/music_game.jpg" alt="post">
+                            <span class="category-name">Music Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/24870'"class="read-btn">Music Game</button>
+                    </div>
+
+                    <div class="all retro">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/puzzle.png" alt="post">
+                            <span class="category-name">Retro-Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/23663'"class="read-btn">Hex Puzzle</button>
+                    </div>
+
+                    <div class="all other">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/chess_minia.jpg" alt="post">
+                            <span class="category-name">Other Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/25061'"class="read-btn">Chess Miania</button>
+                    </div>
+
+
+                    <div class="all retro">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/puzzle peices.jpg" alt="post">
+                            <span class="category-name">Retro-Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/25052'"class="read-btn">Puzzle Pieces</button>
+                    </div>
+
+                    <div class="all retro">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/swap sums.jpg" alt="post">
+                            <span class="category-name">Retro-Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/24973'"class="read-btn">Swap Sums</button>
+                    </div>
+
+                    <div class="all other">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/space friends shooter.jpg" alt="post">
+                            <span class="category-name">Other Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/23751'"class="read-btn">Space Friends Shooter</button>
+                    </div>
+
+                    <div class="all retro">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/checkers minia.jpg" alt="post">
+                            <span class="category-name">Retro-Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/24934'"class="read-btn">Checkers Minia</button>
+                    </div>
+
+                    <div class="all other">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/my brothers fortune.jpg" alt="post">
+                            <span class="category-name">Other Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/25063'"class="read-btn">My Brothers Fortune</button>
+                    </div>
+
+                    <div class="all retro">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/word hunt_11zon.jpg" alt="post">
+                            <span class="category-name">Retro-Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/25068'"class="read-btn">Word Hunt</button>
+                    </div>
+
+                    <div class="all other">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/black jack casino.jpg" alt="post">
+                            <span class="category-name">Other Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/24911'"class="read-btn">Blackjack Casino</button>
+                    </div>
+
+
+
+                    <div class="all other">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/detective loopee.jpg" alt="post">
+                            <span class="category-name">Other Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/25062'"class="read-btn">Detective Loupe</button>
+                    </div>
+
+                    <div class="all other">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/pictoid.jpg" alt="post">
+                            <span class="category-name">Other Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/25067'"class="read-btn">Pictoid</button>
+                    </div>
+
+                    <div class="all other">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/spy n find.jpg" alt="post">
+                            <span class="category-name">Other Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/24998'"class="read-btn">Spy N' Find Daily</button>
+                    </div>
+
+                    <div class="all retro">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/word blitz.jpg" alt="post">
+                            <span class="category-name">Retro-Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/24994'"class="read-btn">Word Blitz</button>
+                    </div>
+
+                    <div class="all other">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/bottle flip.jpg" alt="post">
+                            <span class="category-name">Other Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/24961'"class="read-btn">Bottle Flip Challenge</button>
+                    </div>
+
+                    <div class="all other">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/red snake 3d.jpg" alt="post">
+                            <span class="category-name">Other Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/24825'"class="read-btn">Red Snake 3D</button>
+                    </div>
+
+
+                    <div class="all retro">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/maze.jpg" alt="post">
+                            <span class="category-name">Retro-Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/24768'"class="read-btn">Maze</button>
+                    </div>
+
+                    <div class="all retro">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/classical free solitare.jpg" alt="post">
+                            <span class="category-name">Retro-Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/23346'"class="read-btn">Classic Freecell Solitaire</button>
+                    </div>
+
+                    <div class="all retro">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/stack colors.jpg" alt="post">
+                            <span class="category-name">Retro-Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/24705'"class="read-btn">Stack Colors</button>
+                    </div>
+
+                    <div class="all music">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/dj fest 2.jpg" alt="post">
+                            <span class="category-name">Music Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/flash-games/17459'"class="read-btn">DJ Fest 2</button>
+                    </div>
+
+                    <div class="all other">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/mr toni miami.jpg" alt="post">
+                            <span class="category-name">Other Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/23921'"class="read-btn">Mr Toni Miami</button>
+                    </div>
+
+
+                    <div class="all other">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/robojumb.jpg" alt="post">
+                            <span class="category-name">Other Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='//www.addictinggames.com/embed/html5-games/18137'"class="read-btn">Robojump</button>
+                    </div>
+                    
+                    <div class="all other">
+                        <div class="post-img">
+                            <img src="/static/PHOTOS/CATEGORIES/puzzle.png" alt="post">
+                            <span class="category-name">Other Game</span>
+                        </div>
+                        <button type="button" onclick="window.location.href='/WEB-GAMES/Puzzle Game/index.html'"class="read-btn">PUZZLE-GAME</button>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JS file -->
+    <script src="/static/JAVASCRIPT/category.js"></script>
+</body>
+
+</html>

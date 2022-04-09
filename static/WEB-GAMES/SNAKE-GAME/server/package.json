@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "package.json": "^2.0.1",
+    "socket.io": "^2.4.1",
+    "yarn": "^1.22.17",
+    "yarn.lock": "^0.0.1-security"
+  }
+}
