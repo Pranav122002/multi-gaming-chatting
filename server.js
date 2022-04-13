@@ -16,8 +16,51 @@ var tic_tac_toe_players = {},
   require("./static/JAVASCRIPT/mortal-kombat-games.js").GameCollection),
   (games = new GameCollection());
 
+
+
+
+
+    mongoose.connect("mongodb+srv://Pranav:multi-gaming-chatting@cluster0.pxjff.mongodb.net/test", {
+    useNewUrlParser: true,
+  });
+  const db = mongoose.connection;
+  
+  db.on("error", () => {
+    console.log("error in conection");
+  });
+  db.once("open", () => {
+    console.log("Mongodb Connected");
+  });
+  
+  app.use("/", homeRouter);
+
+
+
+  // mongoose.connect("mongodb://localhost:27017/multi-gaming-chatting", {
+  //   useNewUrlParser: true,
+  // });
+  // const db = mongoose.connection;
+  
+  // db.on("error", () => {
+  //   console.log("error in conection");
+  // });
+  // db.once("open", () => {
+  //   console.log("Mongodb Connected");
+  // });
+  
+  // app.use("/", homeRouter);
+  
+  
+
+
+
+
+
+
+
+
 app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/static/HTML/home.html");
+  res.sendFile(__dirname + "/static/HTML/index.html");
 });
 
 // global chat-app
