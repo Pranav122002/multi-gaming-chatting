@@ -12,6 +12,11 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+
+app.set("view engine", "ejs");
+app.engine('html', require('ejs').renderFile);
+
+
 let num_users_online = 0;
 var tic_tac_toe_players = {},
   unmatched;
@@ -23,7 +28,22 @@ var tic_tac_toe_players = {},
 
 
 
-    mongoose.connect("mongodb+srv://Pranav:multi-gaming-chatting@cluster0.pxjff.mongodb.net/test", {
+  //   mongoose.connect("mongodb+srv://Pranav:multi-gaming-chatting@cluster0.pxjff.mongodb.net/test", {
+  //   useNewUrlParser: true,
+  // });
+  // const db = mongoose.connection;
+  
+  // db.on("error", () => {
+  //   console.log("error in conection");
+  // });
+  // db.once("open", () => {
+  //   console.log("Mongodb Connected");
+  // });
+  // app.use("/", homeRouter);
+
+
+ // put your database name instead multi-gaming-chatting
+  mongoose.connect("mongodb://localhost:27017/multi-gaming-chatting", {   
     useNewUrlParser: true,
   });
   const db = mongoose.connection;
@@ -36,22 +56,6 @@ var tic_tac_toe_players = {},
   });
   
   app.use("/", homeRouter);
-
-
-
-  // mongoose.connect("mongodb://localhost:27017/multi-gaming-chatting", {
-  //   useNewUrlParser: true,
-  // });
-  // const db = mongoose.connection;
-  
-  // db.on("error", () => {
-  //   console.log("error in conection");
-  // });
-  // db.once("open", () => {
-  //   console.log("Mongodb Connected");
-  // });
-  
-  // app.use("/", homeRouter);
   
   
 
