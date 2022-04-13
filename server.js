@@ -1,6 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
+const mongoose = require("mongoose");
+const homeRouter = require("./routers/homeRouter.js");
+
 const http = require("http").Server(app);
 const io = require("socket.io")(http);
 const path = require("path");

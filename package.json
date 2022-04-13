@@ -4,6 +4,7 @@
   "description": "multiplayer games with chat app and ingame chatbox",
   "dependencies": {
     "express": "^4.17.2",
+    "mongoose": "^6.2.10",
     "nodemon": "^2.0.15",
     "socket.io": "^1.7.4"
   },
