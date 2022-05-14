@@ -1,4 +1,4 @@
-const { GRID_SIZE } = require('./constants');
+const { GRID_SIZE } = require('./snake-constants');
 
 module.exports = {
   initGame,

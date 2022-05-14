@@ -12,10 +12,11 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-
 app.set("view engine", "ejs");
-app.engine('html', require('ejs').renderFile);
+app.engine("html", require("ejs").renderFile);
 
+const state = {};
+const clientRooms = {};
 
 let num_users_online = 0;
 var tic_tac_toe_players = {},
@@ -24,47 +25,41 @@ var tic_tac_toe_players = {},
   require("./static/JAVASCRIPT/mortal-kombat-games.js").GameCollection),
   (games = new GameCollection());
 
+const {
+  initGame,
+  gameLoop,
+  getUpdatedVelocity,
+} = require("./static/JAVASCRIPT/snake-game");
+const { FRAME_RATE } = require("./static/JAVASCRIPT/snake-constants");
+const { makeid } = require("./static/JAVASCRIPT/snake-utils");
 
+//   mongoose.connect("mongodb+srv://Pranav:multi-gaming-chatting@cluster0.pxjff.mongodb.net/test", {
+//   useNewUrlParser: true,
+// });
+// const db = mongoose.connection;
 
+// db.on("error", () => {
+//   console.log("error in conection");
+// });
+// db.once("open", () => {
+//   console.log("Mongodb Connected");
+// });
+// app.use("/", homeRouter);
 
+// put your database name instead multi-gaming-chatting
+mongoose.connect("mongodb://localhost:27017/multi-gaming-chatting", {
+  useNewUrlParser: true,
+});
+const db = mongoose.connection;
 
-  //   mongoose.connect("mongodb+srv://Pranav:multi-gaming-chatting@cluster0.pxjff.mongodb.net/test", {
-  //   useNewUrlParser: true,
-  // });
-  // const db = mongoose.connection;
-  
-  // db.on("error", () => {
-  //   console.log("error in conection");
-  // });
-  // db.once("open", () => {
-  //   console.log("Mongodb Connected");
-  // });
-  // app.use("/", homeRouter);
+db.on("error", () => {
+  console.log("error in conection");
+});
+db.once("open", () => {
+  console.log("Mongodb Connected");
+});
 
-
- // put your database name instead multi-gaming-chatting
-  mongoose.connect("mongodb://localhost:27017/multi-gaming-chatting", {   
-    useNewUrlParser: true,
-  });
-  const db = mongoose.connection;
-  
-  db.on("error", () => {
-    console.log("error in conection");
-  });
-  db.once("open", () => {
-    console.log("Mongodb Connected");
-  });
-  
-  app.use("/", homeRouter);
-  
-  
-
-
-
-
-
-
-
+app.use("/", homeRouter);
 
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/static/HTML/index.html");
@@ -86,6 +81,10 @@ app.get("/tic-tac-toe", function (req, res) {
 
 app.get("/mortal-kombat", function (req, res) {
   res.sendFile(__dirname + "/static/HTML/mortal-kombat.html");
+});
+
+app.get("/snake-game", function (req, res) {
+  res.sendFile(__dirname + "/static/HTML/snake.html");
 });
 
 app.get("/battleship", function (req, res) {
@@ -395,8 +394,103 @@ io.on("connection", (socket) => {
   }, 600000); // 10 minute limit per player
 });
 
+// snake-game
+// snake-game
+// snake-game
+// snake-game
+// snake-game
 
+io.on("connection", (client) => {
+  client.on("keydown", handleKeydown);
+  client.on("newGame", handleNewGame);
+  client.on("joinGame", handleJoinGame);
+
+  function handleJoinGame(roomName) {
+    const room = io.sockets.adapter.rooms[roomName];
+    console.log("snake");
+
+    let allUsers;
+    if (room) {
+      allUsers = room.sockets;
+    }
+
+    let numClients = 0;
+    if (allUsers) {
+      numClients = Object.keys(allUsers).length;
+    }
+
+    if (numClients === 0) {
+      client.emit("unknownCode");
+      return;
+    } else if (numClients > 1) {
+      client.emit("tooManyPlayers");
+      return;
+    }
+
+    clientRooms[client.id] = roomName;
+
+    client.join(roomName);
+    client.number = 2;
+    client.emit("init", 2);
+
+    startGameInterval(roomName);
+  }
+
+  function handleNewGame() {
+    let roomName = makeid(5);
+    clientRooms[client.id] = roomName;
+    client.emit("gameCode", roomName);
+
+    state[roomName] = initGame();
+
+    client.join(roomName);
+    client.number = 1;
+    client.emit("init", 1);
+  }
+
+  function handleKeydown(keyCode) {
+    const roomName = clientRooms[client.id];
+    if (!roomName) {
+      return;
+    }
+    try {
+      keyCode = parseInt(keyCode);
+    } catch (e) {
+      console.error(e);
+      return;
+    }
+
+    const vel = getUpdatedVelocity(keyCode);
+
+    if (vel) {
+      state[roomName].players[client.number - 1].vel = vel;
+    }
+  }
+});
+
+function startGameInterval(roomName) {
+  const intervalId = setInterval(() => {
+    const winner = gameLoop(state[roomName]);
+
+    if (!winner) {
+      emitGameState(roomName, state[roomName]);
+    } else {
+      emitGameOver(roomName, winner);
+      state[roomName] = null;
+      clearInterval(intervalId);
+    }
+  }, 1000 / FRAME_RATE);
+}
+
+function emitGameState(room, gameState) {
+  // Send this event to everyone in the room.
+  io.sockets.in(room).emit("gameState", JSON.stringify(gameState));
+}
+
+function emitGameOver(room, winner) {
+  io.sockets.in(room).emit("gameOver", JSON.stringify({ winner }));
+}
 
 http.listen(port, function () {
-  console.log("listening on localhost : " + port);
+  console.log(`Server started on http://localhost:${port} ...`);
 });

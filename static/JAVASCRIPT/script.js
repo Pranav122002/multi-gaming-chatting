@@ -65,7 +65,10 @@ function select(element){
     }
     else if (selectData == "Tic Tac Toe") {
         multi = 'tic-tac-toe';
-
+        player = 1;
+    }
+    else if (selectData == "Snake Game") {
+        multi = 'snake-game';
         player = 1;
     }
     else if (selectData == "Car Race") {
