@@ -1,191 +1,182 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-img{width: 100%}
+img {
+  width: 100%;
+}
 
-body{
-    background-color: #292929;
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.5;
+body {
+  background-color: #292929;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
 }
 
 /****************/
-.main-container{
-    width: 90vw;
-    margin: 0 auto;
-    padding: 4px 0;
-    
+.main-container {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 4px 0;
 }
-.main-container > h2{
-    text-align: center;
-    padding: 10px 0;
-    font-size: 32px;
+.main-container > h2 {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 32px;
 }
-.main-container > p{
-    font-weight: 300;
-    padding: 10px 0;
-    opacity: 0.7;
-    text-align: center;
+.main-container > p {
+  font-weight: 300;
+  padding: 10px 0;
+  opacity: 0.7;
+  text-align: center;
 }
-.category-head{
-    margin: 30px 0;
+.category-head {
+  margin: 30px 0;
 }
-.category-head ul{
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+.category-head ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
-.category-title{
-    flex: 0 0 calc(6% - 6px);
-    display: flex;
-    justify-content:center;
-    background: #a8a8a8;
-    padding: 8px;
-    color: #fff;
-    margin: 12px;
-    cursor: pointer;
-    transition: all 0.4s ease;
-    border-radius: 10px;
+.category-title {
+  flex: 0 0 calc(6% - 6px);
+  display: flex;
+  justify-content: center;
+  background: #a8a8a8;
+  padding: 8px;
+  color: #fff;
+  margin: 12px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  border-radius: 10px;
 }
-.category-title:hover{
-    opacity: 0.7;
+.category-title:hover {
+  opacity: 0.7;
 }
-.category-title li{
-    padding: 0 8px;
+.category-title li {
+  padding: 0 8px;
 }
-.category-title span{
-    color: #222;
+.category-title span {
+  color: #222;
 }
 
 /** single post **/
-.posts-main-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 45px;
-    border-radius: 10px;
+.posts-main-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 45px;
+  border-radius: 10px;
 }
-.posts-main-container > div{
-    box-shadow: 0px 8px 22px 1px rgb(177 21 21);
-    border-radius: 25px;
-
+.posts-main-container > div {
+  box-shadow: 0px 8px 22px 1px rgb(177 21 21);
+  border-radius: 25px;
 }
-.post-img{
-    border-radius: 50px;
-    position: relative;
-    width: fit-content;
-    height: fit-content;
-    
+.post-img {
+  border-radius: 50px;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
 }
-.category-name{
-    position: absolute;
-    top: 5px;
-    left: 6px;
-    text-transform: uppercase;
-    font-size: 10px;
-    color: #fff;
-    padding: 2px 4px;
-    border-radius: 10px;
+.category-name {
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: #fff;
+  padding: 2px 4px;
+  border-radius: 10px;
 }
-.all .category-name{
-    background: #00a7ea;
+.all .category-name {
+  background: #00a7ea;
 }
-.shooting .category-name{
-    background: #f03250;
+.shooting .category-name {
+  background: #f03250;
 }
-.racing .category-name{
-    background: #f0544f;
-}
-.finance .category-name{
-    background: #2c2a4a;
-}
-.multiplayer .category-name{
-    background: #165113;
-}
-.sports .category-name{
-    background: #ae29ba;
-}
-.music .category-name{
-    background: #29ba30;
-}
-.all{
-    background-color: #f5f2f2;
-    border-radius: 15px;
-    border: black;
-    height: 258px;
-
-   
+.racing .category-name {
+  background: #f0544f;
 }
 
-
-.post-content{
-    padding: 2px;
+.multiplayer .category-name {
+  background: #165113;
 }
-.post-content-top{
-    background: #80ced7;
-    color: #fff;
-    opacity: 0.8;
-    padding: 5px 0 5px 15px;
+.sports .category-name {
+  background: #ae29ba;
 }
-.post-content-top span{
-    padding-right: 20px;
+.music .category-name {
+  background: #29ba30;
 }
-.post-content-top .fa-comment, .post-content-top .fa-calendar{
-    padding-right: 5px;
-}
-.post-content h2{
-    font-size: 22px;
-    padding: 12px 0;
-    font-weight: 400;
-}
-.post-content p{
-    opacity: 0.7;
-    font-size: 15px;
-    line-height: 1.8;
-}
-.read-btn{
-    border: none;
-    padding: 3px 8px;
-    display: block;
-    margin: 0.1px auto;
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
-    cursor: pointer;
-    border: 1px solid #f5f2f2;
-    background-color: #f00b0b;
-    margin-bottom: 40px;
-    border-radius: 10px;
+.all {
+  background-color: #f5f2f2;
+  border-radius: 15px;
+  border: black;
+  height: 258px;
 }
 
-.read-btn:hover{
-    background: #f6f6f6;
+.post-content {
+  padding: 2px;
+}
+.post-content-top {
+  background: #80ced7;
+  color: #fff;
+  opacity: 0.8;
+  padding: 5px 0 5px 15px;
+}
+.post-content-top span {
+  padding-right: 20px;
+}
+.post-content-top .fa-comment,
+.post-content-top .fa-calendar {
+  padding-right: 5px;
+}
+.post-content h2 {
+  font-size: 22px;
+  padding: 12px 0;
+  font-weight: 400;
+}
+.post-content p {
+  opacity: 0.7;
+  font-size: 15px;
+  line-height: 1.8;
+}
+.read-btn {
+  border: none;
+  padding: 3px 8px;
+  display: block;
+  margin: 0.1px auto;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  border: 1px solid #f5f2f2;
+  background-color: #f00b0b;
+  margin-bottom: 40px;
+  border-radius: 10px;
 }
 
-
+.read-btn:hover {
+  background: #f6f6f6;
+}
 
 /***************/
-@media(max-width: 1170px){
-    .posts-main-container{
-        grid-template-columns: repeat(2, 1fr);
-    }
+@media (max-width: 1170px) {
+  .posts-main-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-@media(max-width: 768px){
-    .posts-main-container{
-        grid-template-columns: 1fr;
-    }
+@media (max-width: 768px) {
+  .posts-main-container {
+    grid-template-columns: 1fr;
+  }
 }
-
 
 /***********/
 
-.active{
-    background: #f0544f;
+.active {
+  background: #f0544f;
 }
 img {
-    border-radius: 25px;
+  border-radius: 25px;
 }

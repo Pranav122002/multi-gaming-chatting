@@ -12,5 +12,6 @@ let suggestions = [
     "Shadow Fight",
     "Mini Militia",
     "Snake Game",
+    "Puzzle",
 
 ];

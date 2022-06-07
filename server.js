@@ -87,6 +87,10 @@ app.get("/snake-game", function (req, res) {
   res.sendFile(__dirname + "/static/HTML/snake.html");
 });
 
+app.get("/puzzle", function (req, res) {
+  res.sendFile(__dirname + "/static/HTML/puzzle.html");
+});
+
 app.get("/battleship", function (req, res) {
   res.sendFile(__dirname + "/static/HTML/battleship-index.html");
 });

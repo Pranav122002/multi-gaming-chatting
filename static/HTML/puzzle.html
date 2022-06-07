@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Picture Puzzle Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/static/CSS/puzzle.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="container">	
+	<a href="#" class="button start">Start</a>
+	<div class="box">	
+		<div class="me full"></div>
+	</div>
+	<div class="pre_img">	
+		<li data-bid="0"><img src="/static/PHOTOS/puzzle/naruto.jpg"></li>
+		<li data-bid="1"><img src="/static/PHOTOS/puzzle/minion.jpg"></li>
+		<li data-bid="2"><img src="/static/PHOTOS/puzzle/tom_jerry.jpg"></li>	
+		<li data-bid="3" id="upfile1"><img src="/static/PHOTOS/puzzle/upload.jpg"/></li>
+		<input type="file" name="image" id="file1" style="display: none">
+	</div>
+	<div align="center"><a href="#" class="button reset" align="center">Reset</a></div>
+</div>
+
+<div class="cover" >
+	<div class="score">
+		<p id="scr_head">  Puzzel Solved </p>
+		<p id="scr_time"> Time : <span id="min">00</span> Min <span id="sec">00</span> Sec</p>
+		<p id="scr_moves"> Moves : <span id="moves"></span></p>
+		<!-- <p class="i"></p> -->
+		<div class="button OK">OK</div>
+	</div>
+</div>
+<!-- partial -->
+<!-- ajax makes website fast and dynamic -->
+<!-- asyncornous javascipt and xml -->
+<!-- cdjns library jquery cloudflare-->
+<!-- A content delivery network (CDN) is a group of geographically distributed servers that speed  -->
+<!-- up the delivery of web content by bringing it closer to where users are. -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="/static/JAVASCRIPT/puzzle.js"></script>
+
+</body>
+</html>

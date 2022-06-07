@@ -79,6 +79,11 @@ function select(element){
         player = 0;
         game = "2048";
     }
+    else if (selectData == "Puzzle") {
+        multi = 'puzzle';
+        player = 1;
+        
+    }
     else if (selectData == "Ludo") {
         player = 0;
         game = "LUDO";
